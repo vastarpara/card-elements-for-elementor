@@ -36,6 +36,7 @@ if (!function_exists('card_elements_widget_register')) {
         require_once CARD_ELEMENTS_ELEMENTOR_PATH . 'include/post-card/functions-post-card.php';
         require_once CARD_ELEMENTS_ELEMENTOR_PATH . 'widgets/recipe-card-widget.php';
         require_once CARD_ELEMENTS_ELEMENTOR_PATH . 'widgets/tour-card-widget.php';
+        require_once CARD_ELEMENTS_ELEMENTOR_PATH . 'widgets/listing-card-widget.php';
     }
 
 }
@@ -65,6 +66,9 @@ if (!function_exists('card_elements_widget_script_register')) {
 		
 		wp_register_style('tour-card-style', CARD_ELEMENTS_ELEMENTOR_URL . 'assets/css/tour-card-style.css', false);
         wp_enqueue_style('tour-card-style');
+		
+		wp_register_style('listing-card-style', CARD_ELEMENTS_ELEMENTOR_URL . 'assets/css/listing-card-style.css', false);
+        wp_enqueue_style('listing-card-style');
     }
 
 }
