@@ -14,7 +14,7 @@
 				</div>
 			</div>
 			<div class="recipe-container-content">
-				<div class="recipe-content-type bg-color">
+				<div class="recipe-content-type bg-color-type">
 					<p class="elementor-recipe-type-wrapper"><?php echo $settings['dish_type']; ?></p>
 				</div>
 				<div class="recipe-content">
