@@ -1,5 +1,6 @@
 <!-- Start Tour Card 5 -->
 <div class="tour-card-style-5">
+	<a href="<?php echo $settings['button_link']; ?>">
     <div class="container">
 		<div class="tour-img">
             <img src="<?php echo $settings['place_image']['url']; ?>" sizes="(max-width: 700px) 100vw, 700px" width="700" height="700">
@@ -19,5 +20,6 @@
 			</div>
         </div>
 	</div>
+	</a>
 </div>
 <!-- End Tour Card -->
