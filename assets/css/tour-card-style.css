@@ -2,9 +2,13 @@
 .tour-card-style-1 {
 	box-shadow: 0px 0px 20px 1px #f0f1f3;
     border: 1px solid #f0f1f3;
+	overflow: hidden;
 }
 .tour-card-style-1 .container {
 	background-color: #ffffff;
+}
+.tour-card-style-1 .tour-container {
+	padding: 15px;
 }
 .tour-card-style-1 .tour-img {
 	height: 200px;
@@ -13,7 +17,7 @@
 .tour-card-style-1 .tour-content {
 	display: flex;
 	flex-wrap: wrap;
-	padding: 15px;
+	padding-bottom: 15px;
 }
 .tour-card-style-1 .elementor-tour-name-wrapper {
 	width: 70%;
@@ -29,7 +33,7 @@
 	margin-top: 15px;
 }
 .tour-card-style-1 .tour-details {
-	padding: 0px 15px 15px;
+	padding-bottom: 15px;
 }
 .tour-card-style-1 .tour-details .tour-detail-ul { 
 	background-color: #f7f7f7;
@@ -58,9 +62,6 @@
 	text-align: center;
 	color: #fff;
 }
-.tour-card-style-1 .tour-button {
-	padding: 0px 15px 15px;
-}
 /* End Tour Card 1 */
 
 /* Start Tour Card 2 CSS */ 
@@ -75,14 +76,14 @@
 	background-size: 100% 100%;
 	box-shadow: 0px 0px 20px 1px #f0f1f3;
     border: 1px solid #f0f1f3;
+	overflow: hidden;
 }
 .tour-card-style-2 .container {
 	background-color: #000000;
 	opacity: 0.8;
-	padding: 15px;
+	padding: 135px 15px 15px;
 }
 .tour-card-style-2 .tour-content {
-	padding-top: 135px;
 	display: flex;
 	flex-wrap: wrap;
 }
@@ -142,6 +143,7 @@
 .tour-card-style-3 {
     border: 1px solid #f0f1f3;
 	transition: all 0.3s linear 0s;
+	overflow: hidden;
 }
 .tour-card-style-3:hover {
 	box-shadow: 0px 0px 20px 1px #f0f1f3;
@@ -180,6 +182,9 @@
 /* End Tour Card 3 */
 
 /* Start Tour Card 4 CSS */
+.tour-card-style-4 {
+	overflow: hidden;
+}
 .tour-card-style-4 .container {
     text-align: center;
     position: relative;
@@ -257,9 +262,12 @@
 /* End Tour Card 4 CSS */
 
 /* Start Tour Card 5 CSS */
+.tour-card-style-5 {
+	overflow: hidden;
+}
 .tour-card-style-5 .container {
     position: relative;
-    padding: 0 20px;
+    padding: 15px;
 }
 .tour-card-style-5 .tour-img {
     display: inline-block;
@@ -316,6 +324,7 @@
 .tour-card-style-6 {
 	box-shadow: 0px 0px 20px 1px #f0f1f3;
     border: 1px solid #f0f1f3;
+	overflow: hidden;
 }
 .tour-card-style-6:hover {
     box-shadow: 0 20px 30px rgba(0,0,0,0.2);
