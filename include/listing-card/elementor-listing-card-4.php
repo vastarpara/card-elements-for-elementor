@@ -1,4 +1,4 @@
-<!-- Start Listing Card 4 -->
+<!-- Start Listing Card 4 --> 
 <div class="listing-card-style-4">
 	<a href="<?php echo $settings['button_link']; ?>">
 		<div class="container">
