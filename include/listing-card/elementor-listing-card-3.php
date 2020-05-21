@@ -1,7 +1,7 @@
-<!-- Start Listing Card 4 --> 
-<div class="listing-card-style-4">
+<!-- Start Listing Card 3 -->
+<div class="listing-card-style-3">
 	<a href="<?php echo $settings['button_link']; ?>">
-		<div class="container">
+		<div class="listing-main-container">
 			<div class="listing-container" style="background-image:url(<?php echo $settings['select_image']['url']; ?>);">
 				<div class="listing-content-price bg-color">
 					<div><p class="elementor-listing-price-wrapper"><?php echo $settings['listing_price']; ?></p></div>
