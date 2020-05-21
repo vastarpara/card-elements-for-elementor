@@ -4,7 +4,7 @@
     border: 1px solid #f0f1f3;
 	overflow: hidden;
 }
-.recipe-card-style-1 .container {
+.recipe-card-style-1 .recipe-main-container {
 	background-color: #ffffff;
 }
 .recipe-card-style-1 .recipe-img {
@@ -68,7 +68,7 @@
     border: 1px solid #f0f1f3;
 	overflow: hidden;
 }
-.recipe-card-style-2 .container {
+.recipe-card-style-2 .recipe-main-container {
 	background-color: #000000;
 	opacity: 0.8;
 	padding: 135px 15px 15px;
@@ -128,7 +128,7 @@
 	transition: all 0.35s cubic-bezier(0.45, 0.05, 0.55, 0.95);
 	overflow: hidden;
 }
-.recipe-card-style-3 .container {
+.recipe-card-style-3 .recipe-main-container {
 	padding: 15px 15px 0px;
 }
 .recipe-card-style-3 .recipe-container {
