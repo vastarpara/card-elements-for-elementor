@@ -1,8 +1,8 @@
 <!-- Start Listing Card 1 -->
 <div class="listing-card-style-1">
-    <div class="container">
-		<div>
-			<img src="<?php echo $settings['select_image']['url']; ?>" class="listing-img">
+    <div class="listing-main-container">
+		<div class="listing-img-content">
+			<img src="<?php echo $settings['select_image']['url']; ?>" class="listing-img" alt="<?php _e('Listing Image', CEE_DOMAIN) ?>" />
 		</div>
 		<div class="listing-content">
 			<div class="elementor-listing-name-wrapper"><?php echo $settings['name']; ?></div>
