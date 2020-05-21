@@ -1,5 +1,5 @@
-<!-- Start Listing Card 3 -->
-<div class="listing-card-style-3" style="background-image: url(<?php echo $settings['select_image']['url']; ?>);">
+<!-- Start Listing Card 2 -->
+<div class="listing-card-style-2" style="background-image: url(<?php echo $settings['select_image']['url']; ?>);">
 	<a href="<?php echo $settings['button_link']; ?>">
     <div class="triangle-div"></div>
 	<div class="title">
