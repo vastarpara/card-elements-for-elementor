@@ -19,7 +19,7 @@ class Tour_Card_Elementor_Widget extends Widget_Base {
 
     //Function for get the icon of the element.
     public function get_icon() {
-        return 'eicon-tour';
+        return 'fas fa-bus-alt';
     }
 
     //Function for include element into the category.
@@ -52,8 +52,6 @@ class Tour_Card_Elementor_Widget extends Widget_Base {
                 'tour-card-style-2' => esc_html__('Card Style 2', CEE_DOMAIN),
 				'tour-card-style-3' => esc_html__('Card Style 3', CEE_DOMAIN),
 				'tour-card-style-4' => esc_html__('Card Style 4', CEE_DOMAIN),
-				'tour-card-style-5' => esc_html__('Card Style 5', CEE_DOMAIN),
-				'tour-card-style-6' => esc_html__('Card Style 6', CEE_DOMAIN),
             ],
             'default' => 'tour-card-style-1',
                 ]
@@ -93,7 +91,7 @@ class Tour_Card_Elementor_Widget extends Widget_Base {
             'label' => esc_html__('Days', CEE_DOMAIN),
             'type' => Controls_Manager::NUMBER,
 			'condition' => [
-                'tour_card_style' => ['tour-card-style-1' , 'tour-card-style-2' , 'tour-card-style-5' , 'tour-card-style-6'],
+                'tour_card_style' => ['tour-card-style-1' , 'tour-card-style-2'],
             ],
                 )
         );
@@ -103,7 +101,7 @@ class Tour_Card_Elementor_Widget extends Widget_Base {
             'label' => esc_html__('Persons', CEE_DOMAIN),
             'type' => Controls_Manager::NUMBER,
 			'condition' => [
-                'tour_card_style' => ['tour-card-style-1' , 'tour-card-style-2' , 'tour-card-style-5' , 'tour-card-style-6'],
+                'tour_card_style' => ['tour-card-style-1' , 'tour-card-style-2'],
             ],
                 )
         );
@@ -113,7 +111,7 @@ class Tour_Card_Elementor_Widget extends Widget_Base {
             'label' => esc_html__('Guides', CEE_DOMAIN),
             'type' => Controls_Manager::NUMBER,
 			'condition' => [
-                'tour_card_style' => ['tour-card-style-1' , 'tour-card-style-2' , 'tour-card-style-5' , 'tour-card-style-6'],
+                'tour_card_style' => ['tour-card-style-1' , 'tour-card-style-2'],
             ],
                 )
         );
@@ -239,7 +237,7 @@ class Tour_Card_Elementor_Widget extends Widget_Base {
             'label' => __('Alignment', CEE_DOMAIN),
             'type' => Controls_Manager::CHOOSE,
 			'condition' => [
-                'tour_card_style' => ['tour-card-style-1' , 'tour-card-style-2' , 'tour-card-style-6'],
+                'tour_card_style' => ['tour-card-style-1' , 'tour-card-style-2'],
             ],
             'options' => [
                 'left' => [
@@ -305,7 +303,7 @@ class Tour_Card_Elementor_Widget extends Widget_Base {
                 'section_tour_details', [
             'label' => __('Details', CEE_DOMAIN),
 			'condition' => [
-                'tour_card_style' => ['tour-card-style-1' , 'tour-card-style-2' , 'tour-card-style-5' , 'tour-card-style-6'],
+                'tour_card_style' => ['tour-card-style-1' , 'tour-card-style-2'],
             ],
             'tab' => Controls_Manager::TAB_STYLE,
                 ]
@@ -413,7 +411,7 @@ class Tour_Card_Elementor_Widget extends Widget_Base {
 		
 		/*
          * Start control style tab for tour card
-         * Start name control style
+         * Start button control style
          */
         $this->start_controls_section(
                 'section_tour_button', [
@@ -464,11 +462,31 @@ class Tour_Card_Elementor_Widget extends Widget_Base {
         );
 		
 		$this->add_control(
+                'button_text_hover_color', [
+            'label' => __('Text Hover Color', CEE_DOMAIN),
+            'type' => Controls_Manager::COLOR,
+            'selectors' => [
+                '{{WRAPPER}} .tour-button a:hover' => 'color: {{VALUE}};',
+            ], 
+                ]
+        );
+		
+		$this->add_control(
                 'button_background_color', [
             'label' => __('Background Color', CEE_DOMAIN),
             'type' => Controls_Manager::COLOR,
             'selectors' => [
                 '{{WRAPPER}} .tour-button a' => 'background-color: {{VALUE}};',
+            ],
+                ]
+        );
+		
+		$this->add_control(
+                'button_background_hover_color', [
+            'label' => __('Background Hover Color', CEE_DOMAIN),
+            'type' => Controls_Manager::COLOR,
+            'selectors' => [
+                '{{WRAPPER}} .tour-button a:hover' => 'background-color: {{VALUE}};',
             ],
                 ]
         );
@@ -490,22 +508,69 @@ class Tour_Card_Elementor_Widget extends Widget_Base {
                 ]
         );
 		
+		$this->add_responsive_control(
+                'box_padding', [
+            'label' => __('Padding', CEE_DOMAIN),
+            'type' => Controls_Manager::DIMENSIONS,
+            // 'size_units' => ['px', '%'], not in 4
+			'devices' => [ 'desktop', 'tablet', 'mobile' ],
+            'selectors' => [
+                '{{WRAPPER}} .tour-card-style-1 .tour-container,
+                 {{WRAPPER}} .tour-card-style-2 .tour-main-container,
+                 {{WRAPPER}} .tour-card-style-3 .tour-content,
+                 {{WRAPPER}} .tour-card-style-4 .tour-content' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+            ],
+                ]
+        );
+		
 		$this->add_control(
                 'button_box_background_color', [
             'label' => __('Background Color', CEE_DOMAIN),
             'type' => Controls_Manager::COLOR,
             'selectors' => [
-                '{{WRAPPER}} .tour-card-style-1 .container,
-				 {{WRAPPER}} .tour-card-style-2 .container,
-				 {{WRAPPER}} .tour-card-style-3 .container,
-				 {{WRAPPER}} .tour-card-style-6 .container,
-				 {{WRAPPER}} .tour-card-style-4 .container-inner,
-				 {{WRAPPER}} .tour-card-style-5 .content-price-top,
-				 {{WRAPPER}} .tour-card-style-5 .container-inner' => 'background-color: {{VALUE}};',
+                '{{WRAPPER}} .tour-card-style-1 .tour-main-container,
+				 {{WRAPPER}} .tour-card-style-2 .tour-main-container,
+				 {{WRAPPER}} .tour-card-style-3 .tour-main-container,
+				 {{WRAPPER}} .tour-card-style-4 .container-inner' => 'background-color: {{VALUE}};',
             ],
                 ]
         );
 		
+		$this->add_group_control(
+                Group_Control_Border::get_type(), [
+            'name' => 'image_border',
+				'selector' => '{{WRAPPER}} .tour-card-style-1,
+							   {{WRAPPER}} .tour-card-style-2,
+							   {{WRAPPER}} .tour-card-style-3,
+							   {{WRAPPER}} .tour-card-style-4',
+            'separator' => 'before',
+                ]
+        );
+
+        $this->add_responsive_control(
+                'border_radius', [
+            'label' => __('Border Radius', CEE_DOMAIN),
+            'type' => Controls_Manager::DIMENSIONS,
+            'size_units' => ['px', '%'],
+			'devices' => [ 'desktop', 'tablet', 'mobile' ],
+            'selectors' => [
+                '{{WRAPPER}} .tour-card-style-1,
+                 {{WRAPPER}} .tour-card-style-2,
+                 {{WRAPPER}} .tour-card-style-3,
+                 {{WRAPPER}} .tour-card-style-4' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+            ],
+                ]
+        );
+		
+		$this->add_group_control(
+                Group_Control_Box_Shadow::get_type(), [
+            'name' => 'box_shadow',
+				'selector' => '{{WRAPPER}} .tour-card-style-1,
+							   {{WRAPPER}} .tour-card-style-2,
+							   {{WRAPPER}} .tour-card-style-3,
+							   {{WRAPPER}} .tour-card-style-4',
+                ]
+        );
 		$this->end_controls_section();
 
         /*
@@ -536,12 +601,6 @@ class Tour_Card_Elementor_Widget extends Widget_Base {
                 break;
 			case 'tour-card-style-4':
                 include CARD_ELEMENTS_ELEMENTOR_PATH . 'include/tour-card/elementor-tour-card-4.php';  // Card Style 4
-                break;
-			case 'tour-card-style-5':
-                include CARD_ELEMENTS_ELEMENTOR_PATH . 'include/tour-card/elementor-tour-card-5.php';  // Card Style 5
-                break;
-			case 'tour-card-style-6':
-                include CARD_ELEMENTS_ELEMENTOR_PATH . 'include/tour-card/elementor-tour-card-6.php';  // Card Style 6
                 break;
             default:
                 include CARD_ELEMENTS_ELEMENTOR_PATH . 'include/tour-card/elementor-tour-card-1.php';  // Default Card Style 1
