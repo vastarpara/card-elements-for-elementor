@@ -1,10 +1,10 @@
-<!-- Start Listing Card 5 -->
-<div class="listing-card-style-5">
+<!-- Start Listing Card 4 -->
+<div class="listing-card-style-4">
 	<a href="<?php echo $settings['button_link']; ?>">
     <div class="avatar">
-		<img src="<?php echo $settings['select_image']['url']; ?>" class="listing-img">
+		<img src="<?php echo $settings['select_image']['url']; ?>" class="listing-img" alt="<?php _e('Listing Image', CEE_DOMAIN) ?>" />
     </div>
-	<div class="container">
+	<div class="listing-main-container">
 		<div class="header">
 			<h2 class="elementor-listing-name-wrapper"><?php echo $settings['name']; ?></h2>
 		</div>
