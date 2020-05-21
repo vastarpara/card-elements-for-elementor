@@ -1,9 +1,9 @@
 <!-- Start Tour Card 3 -->
 <div class="tour-card-style-3">
 	<a href="<?php echo $settings['button_link']; ?>">
-		<div class="container">
-			<div>
-				<img src="<?php echo $settings['place_image']['url']; ?>" class="tour-img">
+		<div class="tour-main-container">
+			<div class="tour-img-content">
+				<img src="<?php echo $settings['place_image']['url']; ?>" class="tour-img" alt="<?php _e('Tour Image', CEE_DOMAIN) ?>" />
 			</div>
 			<div class="tour-container-content">
 				<div class="tour-content-price">
