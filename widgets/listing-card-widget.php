@@ -49,11 +49,9 @@ class Listing_Card_Elementor_Widget extends Widget_Base {
             'type' => Controls_Manager::SELECT,
             'options' => [
                 'listing-card-style-1' => esc_html__('Card Style 1', CEE_DOMAIN),
-                'listing-card-style-2' => esc_html__('Card Style 2', CEE_DOMAIN),
+				'listing-card-style-2' => esc_html__('Card Style 2', CEE_DOMAIN),
 				'listing-card-style-3' => esc_html__('Card Style 3', CEE_DOMAIN),
 				'listing-card-style-4' => esc_html__('Card Style 4', CEE_DOMAIN),
-				'listing-card-style-5' => esc_html__('Card Style 5', CEE_DOMAIN),
-				'listing-card-style-6' => esc_html__('Card Style 6', CEE_DOMAIN),
             ],
             'default' => 'listing-card-style-1',
                 ]
@@ -115,7 +113,7 @@ class Listing_Card_Elementor_Widget extends Widget_Base {
             'label' => __('Button Text', CEE_DOMAIN),
             'type' => Controls_Manager::TEXT,
 			'condition' => [
-                'listing_card_style' => ['listing-card-style-1' , 'listing-card-style-2'],
+                'listing_card_style' => ['listing-card-style-1'],
             ],
             'default' => __('View more', CEE_DOMAIN),
             'placeholder' => __('Button text', CEE_DOMAIN),
@@ -139,7 +137,7 @@ class Listing_Card_Elementor_Widget extends Widget_Base {
                 'section_rating', [
             'label' => __('Rating', CEE_DOMAIN),
 			'condition' => [
-                'listing_card_style' => ['listing-card-style-1' , 'listing-card-style-2' , 'listing-card-style-3' , 'listing-card-style-4' , 'listing-card-style-5'],
+                'listing_card_style' => ['listing-card-style-1' , 'listing-card-style-2' , 'listing-card-style-3' , 'listing-card-style-4'],
             ],
             ]
         );
@@ -221,7 +219,7 @@ class Listing_Card_Elementor_Widget extends Widget_Base {
             'label' => __('Alignment', CEE_DOMAIN),
             'type' => Controls_Manager::CHOOSE,
 			'condition' => [
-                'listing_card_style' => ['listing-card-style-1' , 'listing-card-style-2' , 'listing-card-style-5' , 'listing-card-style-6'],
+                'listing_card_style' => ['listing-card-style-1' , 'listing-card-style-4'],
             ],
             'options' => [
                 'left' => [
@@ -262,7 +260,7 @@ class Listing_Card_Elementor_Widget extends Widget_Base {
             'label' => __('Background Color', CEE_DOMAIN),
             'type' => Controls_Manager::COLOR,
 			'condition' => [
-                'listing_card_style' => ['listing-card-style-3' , 'listing-card-style-4'],
+                'listing_card_style' => ['listing-card-style-2' , 'listing-card-style-3'],
             ],
             'selectors' => [
                 '{{WRAPPER}} .wrapper-name,
@@ -296,7 +294,7 @@ class Listing_Card_Elementor_Widget extends Widget_Base {
             'label' => __('Alignment', CEE_DOMAIN),
             'type' => Controls_Manager::CHOOSE,
 			'condition' => [
-                'listing_card_style' => ['listing-card-style-1' , 'listing-card-style-2' , 'listing-card-style-5' , 'listing-card-style-6'],
+                'listing_card_style' => ['listing-card-style-1' , 'listing-card-style-4'],
             ],
             'options' => [
                 'left' => [
@@ -337,7 +335,7 @@ class Listing_Card_Elementor_Widget extends Widget_Base {
             'label' => __('Background Color', CEE_DOMAIN),
             'type' => Controls_Manager::COLOR,
 			'condition' => [
-                'listing_card_style' => ['listing-card-style-3' , 'listing-card-style-4' , 'listing-card-style-5'],
+                'listing_card_style' => ['listing-card-style-2' , 'listing-card-style-3' , 'listing-card-style-4'],
             ],
             'selectors' => [
                 '{{WRAPPER}} .wrapper-price , 
@@ -359,7 +357,7 @@ class Listing_Card_Elementor_Widget extends Widget_Base {
             'label' => __('Spacing', CEE_DOMAIN),
             'type' => Controls_Manager::SLIDER,
 			'condition' => [
-                'listing_card_style' => ['listing-card-style-3'],
+                'listing_card_style' => ['listing-card-style-2'],
             ],
             'range' => [
                 '%' => [
@@ -428,7 +426,7 @@ class Listing_Card_Elementor_Widget extends Widget_Base {
             'label' => __('Background Color', CEE_DOMAIN),
             'type' => Controls_Manager::COLOR,
 			'condition' => [
-                'listing_card_style' => ['listing-card-style-3'],
+                'listing_card_style' => ['listing-card-style-2'],
             ],
             'selectors' => [
                 '{{WRAPPER}} .description' => 'background-color: {{VALUE}};',
@@ -453,7 +451,7 @@ class Listing_Card_Elementor_Widget extends Widget_Base {
             'label' => __('Stars', CEE_DOMAIN),
             'tab' => Controls_Manager::TAB_STYLE,
 			'condition' => [
-                'listing_card_style' => ['listing-card-style-1' , 'listing-card-style-2' , 'listing-card-style-3' , 'listing-card-style-4' , 'listing-card-style-5'],
+                'listing_card_style' => ['listing-card-style-1' , 'listing-card-style-2' , 'listing-card-style-3' , 'listing-card-style-4'],
             ],
             ]
         );
@@ -541,7 +539,7 @@ class Listing_Card_Elementor_Widget extends Widget_Base {
             'label' => __('Background Color', CEE_DOMAIN),
             'type' => Controls_Manager::COLOR,
 			'condition' => [
-                'listing_card_style' => ['listing-card-style-3'],
+                'listing_card_style' => ['listing-card-style-2'],
             ],
             'selectors' => [
                 '{{WRAPPER}} .star' => 'background-color: {{VALUE}};',
@@ -557,7 +555,7 @@ class Listing_Card_Elementor_Widget extends Widget_Base {
                 'section_triangle_style', [
             'label' => __('Triangle', CEE_DOMAIN),
 			'condition' => [
-                'listing_card_style' => ['listing-card-style-3'],
+                'listing_card_style' => ['listing-card-style-2'],
             ],
             'tab' => Controls_Manager::TAB_STYLE,
             ]
@@ -568,7 +566,7 @@ class Listing_Card_Elementor_Widget extends Widget_Base {
             'label' => __('Color', CEE_DOMAIN),
             'type' => Controls_Manager::COLOR,
 			'condition' => [
-                'listing_card_style' => ['listing-card-style-3'],
+                'listing_card_style' => ['listing-card-style-2'],
             ],
             'selectors' => [
                 '{{WRAPPER}} .triangle-div' => 'border-top: solid 30px {{VALUE}}; border-left: solid 30px {{VALUE}};',
@@ -585,7 +583,7 @@ class Listing_Card_Elementor_Widget extends Widget_Base {
                 'section_listing_button', [
             'label' => __('Button', CEE_DOMAIN),
 			'condition' => [
-                'listing_card_style' => ['listing-card-style-1' , 'listing-card-style-2'],
+                'listing_card_style' => ['listing-card-style-1'],
             ],
             'tab' => Controls_Manager::TAB_STYLE,
                 ]
@@ -681,17 +679,15 @@ class Listing_Card_Elementor_Widget extends Widget_Base {
             'label' => __('Padding', CEE_DOMAIN),
             'type' => Controls_Manager::DIMENSIONS,
 			'condition' => [
-                'listing_card_style' => ['listing-card-style-1' , 'listing-card-style-2' , 'listing-card-style-4' , 'listing-card-style-5' , 'listing-card-style-6'],
+                'listing_card_style' => ['listing-card-style-1', 'listing-card-style-3' , 'listing-card-style-4'],
             ],
             'size_units' => ['px', '%'],
 			'devices' => [ 'desktop', 'tablet', 'mobile' ],
             'selectors' => [
                 '{{WRAPPER}} .listing-card-style-1 .listing-content,
-                 {{WRAPPER}} .listing-card-style-2 .container,
-                 {{WRAPPER}} .listing-card-style-3 .container,
-                 {{WRAPPER}} .listing-card-style-4 .listing-content,
-                 {{WRAPPER}} .listing-card-style-6,
-                 {{WRAPPER}} .listing-card-style-5 .container' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                 {{WRAPPER}} .listing-card-style-2,
+                 {{WRAPPER}} .listing-card-style-3 .listing-content,
+                 {{WRAPPER}} .listing-card-style-4 .listing-main-container' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
             ],
                 ]
         );
@@ -701,15 +697,13 @@ class Listing_Card_Elementor_Widget extends Widget_Base {
             'label' => __('Background Color', CEE_DOMAIN),
             'type' => Controls_Manager::COLOR,
 			'condition' => [
-                'listing_card_style' => ['listing-card-style-1' , 'listing-card-style-2' , 'listing-card-style-4' , 'listing-card-style-5' , 'listing-card-style-6'],
+                'listing_card_style' => ['listing-card-style-1', 'listing-card-style-3' , 'listing-card-style-4'],
             ],
             'selectors' => [
-                '{{WRAPPER}} .listing-card-style-1 .container,
-				 {{WRAPPER}} .listing-card-style-2 .container,
-				 {{WRAPPER}} .listing-card-style-3 .container,
-				 {{WRAPPER}} .listing-card-style-4 .container,
-				 {{WRAPPER}} .listing-card-style-6,
-				 {{WRAPPER}} .listing-card-style-5' => 'background-color: {{VALUE}};',
+                '{{WRAPPER}} .listing-card-style-1 .listing-main-container,
+				 {{WRAPPER}} .listing-card-style-2,
+				 {{WRAPPER}} .listing-card-style-3 .listing-main-container,
+				 {{WRAPPER}} .listing-card-style-4' => 'background-color: {{VALUE}};',
             ],
                 ]
         );
@@ -720,9 +714,7 @@ class Listing_Card_Elementor_Widget extends Widget_Base {
 				'selector' => '{{WRAPPER}} .listing-card-style-1,
 							   {{WRAPPER}} .listing-card-style-2,
 							   {{WRAPPER}} .listing-card-style-3,
-							   {{WRAPPER}} .listing-card-style-4,
-							   {{WRAPPER}} .listing-card-style-5,
-							   {{WRAPPER}} .listing-card-style-6',
+							   {{WRAPPER}} .listing-card-style-4',
             'separator' => 'before',
                 ]
         );
@@ -737,9 +729,7 @@ class Listing_Card_Elementor_Widget extends Widget_Base {
                 '{{WRAPPER}} .listing-card-style-1,
                  {{WRAPPER}} .listing-card-style-2,
                  {{WRAPPER}} .listing-card-style-3,
-                 {{WRAPPER}} .listing-card-style-4,
-                 {{WRAPPER}} .listing-card-style-5,
-                 {{WRAPPER}} .listing-card-style-6' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                 {{WRAPPER}} .listing-card-style-4' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
             ],
                 ]
         );
@@ -750,9 +740,7 @@ class Listing_Card_Elementor_Widget extends Widget_Base {
 				'selector' => '{{WRAPPER}} .listing-card-style-1,
 							   {{WRAPPER}} .listing-card-style-2,
 							   {{WRAPPER}} .listing-card-style-3,
-							   {{WRAPPER}} .listing-card-style-4,
-							   {{WRAPPER}} .listing-card-style-5,
-							   {{WRAPPER}} .listing-card-style-6',
+							   {{WRAPPER}} .listing-card-style-4',
                 ]
         );
 		$this->end_controls_section();
@@ -848,12 +836,6 @@ class Listing_Card_Elementor_Widget extends Widget_Base {
                 break;
 			case 'listing-card-style-4':
                 include CARD_ELEMENTS_ELEMENTOR_PATH . 'include/listing-card/elementor-listing-card-4.php';  // Card Style 4
-                break;
-			case 'listing-card-style-5':
-                include CARD_ELEMENTS_ELEMENTOR_PATH . 'include/listing-card/elementor-listing-card-5.php';  // Card Style 5
-                break;
-			case 'listing-card-style-6':
-                include CARD_ELEMENTS_ELEMENTOR_PATH . 'include/listing-card/elementor-listing-card-6.php';  // Card Style 6
                 break;
             default:
                 include CARD_ELEMENTS_ELEMENTOR_PATH . 'include/listing-card/elementor-listing-card-1.php';  // Default Card Style 1
