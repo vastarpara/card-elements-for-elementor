@@ -4,7 +4,7 @@
     border: 1px solid #f0f1f3;
 	overflow: hidden;
 }
-.listing-card-style-1 .container {
+.listing-card-style-1 .listing-main-container {
 	background-color: #ffffff;
 }
 .listing-card-style-1 .listing-container {
@@ -36,82 +36,11 @@
 
 /* Start Listing Card 2 CSS */
 .listing-card-style-2 {
-	box-shadow: 0px 0px 20px 1px #f0f1f3;
-    border: 1px solid #f0f1f3;
-	overflow: hidden;
-}
-.listing-card-style-2 .container {
-	padding: 15px 15px;
-}
-.listing-card-style-2 .listing-container {
-	display: flex;
-	flex-wrap: wrap;
-}
-.listing-card-style-2 .listing-content {
-	width: 70%;
-	padding-left: 15px;
-}
-.listing-card-style-2 .listing-content-img {
-	width: 30%;
-	align-self: center;
-}
-.listing-card-style-2 .elementor-listing-name-wrapper {
-	font-size: 20px;
-	line-height: 1;
-}
-.listing-card-style-2 .elementor-listing-price-wrapper {
-	font-size: 20px;
-	text-align: left;
-	width: 50%;
-}
-.listing-card-style-2 .elementor-listing-description-wrapper {
-	color: #d8d8d8;
-	line-height: 1.3;
-}
-.listing-card-style-2 .listing-details .listing-detail-ul {
-	display: flex;
-    list-style: none;
-	text-align: center;
-    margin: 0;
-    -webkit-box-pack: justify;
-    justify-content: space-between;
-}
-.listing-card-style-2 .listing-details .listing-detail-list {
-	flex: 1;
-}
-.listing-card-style-2 .listing-details {
-	padding: 15px 0;
-}
-.listing-card-style-2 .listing-details .listing-detail-list p {
-	margin-bottom: 0px;
-}
-.listing-card-style-2 .listing-detail-icon {
-	font-size: 20px;
-}
-.listing-card-style-2 .elementor-btn-price {
-	display: flex;
-	align-self: center;
-}
-.listing-card-style-2 .listing-button {
-	width: 50%;
-}
-.listing-card-style-2 .view-listing-btn {
-	padding: 3px 0px;
-	width: 100%;
-	background-color: #3a3a3a;
-	display: block;
-	text-align: center;
-	color: #fff;
-}
-/* End Listing Card 2 CSS */
-
-/* Start Listing Card 11 CSS */
-.listing-card-style-3 {
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
 }
-.listing-card-style-3 .triangle-div {
+.listing-card-style-2 .triangle-div {
 	width: 50px;
 	height: 50px;
 	border-top: solid 30px #61ce70;
@@ -119,22 +48,22 @@
 	border-right: solid 30px transparent;
 	border-bottom: solid 30px transparent;
 }
-.listing-card-style-3 .star, .listing-card-style-3 .description {
+.listing-card-style-2 .star, .listing-card-style-2 .description {
 	background-color: #61ce70;
 	padding: 5px 15px;
 	margin: 5px 0;
 	color: #fff;
 	font-weight: 600;
 }
-.listing-card-style-3 .elementor-listing-name-wrapper {
+.listing-card-style-2 .elementor-listing-name-wrapper {
 	font-size: 22px;
 	padding: 4px 20px;
 }
-.listing-card-style-3 .description {
+.listing-card-style-2 .description {
 	font-size: 15px;
 	line-height: 1.5;
 }
-.listing-card-style-3 .title {
+.listing-card-style-2 .title {
 	margin-top: 25%;
 	height: 125px;
 	width: 0;
@@ -144,14 +73,14 @@
 	-moz-transition: width .5s;
 	transition: width .5s;
 }
-.listing-card-style-3:hover {
+.listing-card-style-2:hover {
 	opacity: .8;
 }
-.listing-card-style-3:hover .title {
+.listing-card-style-2:hover .title {
 	display: block;
 	width: 75%;
 }
-.listing-card-style-3 .wrapper-name {
+.listing-card-style-2 .wrapper-name {
     display: inline;
     position: absolute;
     top: 5%;
@@ -161,11 +90,11 @@
     box-shadow: 0 6px 21px rgba(2,2,2,0.3);
     transition: all .25s ease-in-out;
 }
-.listing-card-style-3:hover .wrapper-name {
+.listing-card-style-2:hover .wrapper-name {
     right: 5%;
     transition: all 0.8s cubic-bezier(0.68, -0.55, 0.27, 1.55);
 }
-.listing-card-style-3 .wrapper-price {
+.listing-card-style-2 .wrapper-price {
     display: inline;
     position: absolute;
     top: 23%;
@@ -176,23 +105,23 @@
     box-shadow: 0 6px 21px rgba(2,2,2,0.3);
     transition: all .25s ease-in-out;
 }
-.listing-card-style-3:hover .wrapper-price {
+.listing-card-style-2:hover .wrapper-price {
     right: 5%;
     transition: all 0.8s cubic-bezier(0.68, -0.55, 0.27, 1.55);
 }
-/* End Listing Card 3 CSS */
+/* End Listing Card 2 CSS */
 
-/* Start Listing Card 4 CSS */ 
-.listing-card-style-4 {
+/* Start Listing Card 3 CSS */ 
+.listing-card-style-3 {
     border: 1px solid #f0f1f3;
 	transition: all 0.3s linear 0s;
 	overflow: hidden;
 }
-.listing-card-style-4:hover {
+.listing-card-style-3:hover {
 	box-shadow: 0px 0px 20px 1px #f0f1f3;
 	transition: all 0.3s linear 0s;
 }
-.listing-card-style-4 .listing-content-price {
+.listing-card-style-3 .listing-content-price {
 	position: absolute;
     right: 15px;
 	top: 15px;
@@ -206,51 +135,51 @@
     text-align: center;
     box-sizing: border-box;
 }
-.listing-card-style-4 .bg-color {
+.listing-card-style-3 .bg-color {
     background: #e25f13;
 }
-.listing-card-style-4 .bg-color-name {
+.listing-card-style-3 .bg-color-name {
     background: #e25f13;
 }
-.listing-card-style-4 .listing-content-min {
+.listing-card-style-3 .listing-content-min {
 	top: 15px;
 }
-.listing-card-style-4 .listing-container {
+.listing-card-style-3 .listing-container {
 	background-repeat: no-repeat; 
 	background-size: 100% 100%;
 	height: 180px;
 }
-.listing-card-style-4 .elementor-listing-price-wrapper {
+.listing-card-style-3 .elementor-listing-price-wrapper {
 	margin-bottom: 0px;
 	line-height: 1.5;
 	font-size: 20px;
 }
-.listing-card-style-4 .listing-container-content {
+.listing-card-style-3 .listing-container-content {
 	position: relative;
 }
-.listing-card-style-4 .listing-content-name {
+.listing-card-style-3 .listing-content-name {
 	position: absolute;
 	top: -20px;
     left: 0;
     padding: 5px 15px;
 }
-.listing-card-style-4 .elementor-listing-name-wrapper {
+.listing-card-style-3 .elementor-listing-name-wrapper {
 	color: #FFFFFF;
     font-size: 15px;
 	text-transform: uppercase;
 	margin-bottom: 0px;
 }
-.listing-card-style-4 .listing-content {
+.listing-card-style-3 .listing-content {
 	padding: 30px 15px 15px;
 }
-.listing-card-style-4 .elementor-listing-description-wrapper {
+.listing-card-style-3 .elementor-listing-description-wrapper {
 	color: #d8d8d8;
 	margin-bottom: 0px;
 }
-/* End Listing Card 4 */
+/* End Listing Card 3 */
 
-/* Start Listing Card 5 CSS */
-.listing-card-style-5 {
+/* Start Listing Card 4 CSS */
+.listing-card-style-4 {
 	margin: 70px 20px 20px 20px;
 	background: #fff;
 	border-radius: 25px;
@@ -261,13 +190,13 @@
 	box-shadow: 0 0 60px -15px rgba(0, 0, 0, 0.25);
 	transition: transform 300ms ease, -webkit-transform 300ms ease;
 }
-.listing-card-style-5 h2 {
+.listing-card-style-4 h2 {
 	margin: 0;
 	padding: 1rem 0px;
 	text-align: center;
 	font-weight: bold;
 }
-.listing-card-style-5 .actions {
+.listing-card-style-4 .actions {
 	-webkit-transition: -webkit-box-shadow 300ms ease;
 	transition: -webkit-box-shadow 300ms ease;
 	-o-transition: box-shadow 300ms ease;
@@ -278,12 +207,12 @@
 	border-bottom-left-radius: 25px;
 	border-bottom-right-radius: 25px;
 }
-.listing-card-style-5:hover {
+.listing-card-style-4:hover {
 	-webkit-transform: scale(1.03);
 	-ms-transform: scale(1.03);
 	transform: scale(1.03);
 }
-.actions .listing-footer {
+.listing-card-style-4 .actions .listing-footer {
 	text-align: center;
 	width: 50%;
 	float: left;
@@ -300,7 +229,7 @@
 	font-family: Lato, sans-serif;
 	cursor: pointer;
 }  
-.avatar {
+.listing-card-style-4 .avatar {
 	position: absolute;
 	top: -60px;
 	left: 50%;
@@ -318,45 +247,17 @@
 	transition: transform 200ms ease;
 	transition: transform 200ms ease, -webkit-transform 200ms ease;
 }
-.avatar:hover {
+.listing-card-style-4 .avatar:hover {
 	-webkit-transform: translateX(-50%) scale(1.1);
 	-ms-transform: translateX(-50%) scale(1.1);
 	transform: translateX(-50%) scale(1.1);
 }
-.listing-card-style-5 .avatar img {
+.listing-card-style-4 .avatar img {
 	width: 100%;
 	height: 150px;
 	border-radius: 50%;
 }
-.listing-card-style-5 .elementor-star-rating__wrapper {
+.listing-card-style-4 .elementor-star-rating__wrapper {
 	justify-content: center;
 }
-/* End Listing Card 5 */
-
-/* Start Listing Card 6 CSS */
-.listing-card-style-6 {
-	padding: 15px;
-	box-shadow: 0px 0px 20px 1px #f0f1f3;
-    transition: all 0.3s linear 0s;
-}
-.listing-card-style-6 .container {
-	display: flex;
-	margin-bottom: 15px;
-}
-.listing-card-style-6 .content-img,  
-.listing-card-style-6 .elementor-listing-price-wrapper {
-	width: 50%;
-}
-.listing-card-style-6 .elementor-listing-price-wrapper {
-	align-self: center;
-	text-align: right;
-	font-size: 32px;
-}
-.listing-card-style-6 .elementor-listing-name-wrapper {
-	margin-bottom: 15px;
-}
-.listing-card-style-6 .content-img img {
-	width: 70px;
-	height: 70px;
-	border-radius: 50%;
-}
+/* End Listing Card 4 */
