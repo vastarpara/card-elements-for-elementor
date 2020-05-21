@@ -4,7 +4,7 @@
     border: 1px solid #f0f1f3;
 	overflow: hidden;
 }
-.tour-card-style-1 .container {
+.tour-card-style-1 .tour-main-container {
 	background-color: #ffffff;
 }
 .tour-card-style-1 .tour-container {
@@ -78,7 +78,7 @@
     border: 1px solid #f0f1f3;
 	overflow: hidden;
 }
-.tour-card-style-2 .container {
+.tour-card-style-2 .tour-main-container {
 	background-color: #000000;
 	opacity: 0.8;
 	padding: 135px 15px 15px;
@@ -185,7 +185,7 @@
 .tour-card-style-4 {
 	overflow: hidden;
 }
-.tour-card-style-4 .container {
+.tour-card-style-4 .tour-main-container {
     text-align: center;
     position: relative;
 }
@@ -214,13 +214,13 @@
     box-shadow: 0px 0px 20px rgba(0,0,0,0.2);
 }
 
-.tour-card-style-4 .container .tour-image-container {
+.tour-card-style-4 .tour-main-container .tour-image-container {
     position: relative;
     overflow: hidden;
     background-color: transparent;
     margin-top: 0px;
 }
-.tour-card-style-4 .container .tour-image-container:before {
+.tour-card-style-4 .tour-main-container .tour-image-container:before {
     background-image: -webkit-linear-gradient(bottom, #6747ee, rgba(145, 36, 220, 0.2));
     filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#6747ee', endColorStr='rgba(145, 36, 220, 0.2)');
     content: '';
@@ -233,13 +233,13 @@
     -o-transition: all 300ms linear 0ms;
     transition: all 300ms linear 0ms;
 }
-.tour-card-style-4 .container .tour-image-container img {
+.tour-card-style-4 .tour-main-container .tour-image-container img {
     transition: all 300ms linear 0ms;
 }
-.tour-card-style-4 .container .tour-image-container .tour-desc-inner {
+.tour-card-style-4 .tour-main-container .tour-image-container .tour-desc-inner {
     z-index: 1;
 }
-.tour-card-style-4 .container .tour-image-container .tour-desc-inner {
+.tour-card-style-4 .tour-main-container .tour-image-container .tour-desc-inner {
     position: absolute;
     left: 15px;
     right: 15px;
@@ -248,140 +248,15 @@
     transition: all 300ms linear 0ms;
 	color: #ffffff;
 }
-.tour-card-style-4 .container:hover .tour-desc-inner {
+.tour-card-style-4 .tour-main-container:hover .tour-desc-inner {
     bottom: 30px;
     opacity: 1;
 }
-.tour-card-style-4 .container:hover .elementor-tour-description-wrapper {
+.tour-card-style-4 .tour-main-container:hover .elementor-tour-description-wrapper {
     bottom: 24px;
     opacity: 1;
 }
-.tour-card-style-4 .container:hover .tour-image-container img {
+.tour-card-style-4 .tour-main-container:hover .tour-image-container img {
     opacity: 0.5;
 }
 /* End Tour Card 4 CSS */
-
-/* Start Tour Card 5 CSS */
-.tour-card-style-5 {
-	overflow: hidden;
-}
-.tour-card-style-5 .container {
-    position: relative;
-    padding: 15px;
-}
-.tour-card-style-5 .tour-img {
-    display: inline-block;
-}
-.tour-card-style-5 .tour-img img {
-    border-radius: 50%;
-    border: 10px solid #fff;
-    box-shadow: 0 8px 21px #E1E7FF;
-}
-.tour-card-style-5 .elementor-tour-name-wrapper {
-	font-size: 25px;
-}
-.tour-card-style-5 .container-inner {
-    padding: 55px 15px 15px;
-    box-shadow: 0 6px 21px rgba(1,1,1,0.2);
-    border-radius: 34px 34px 0 34px;
-    margin-top: -40px;
-}
-.tour-card-style-5 .content-price-top {
-	padding: 8px 20px;
-	background-color: #fff;
-    display: inline;
-    position: absolute;
-    top: 10px;
-    right: -10px;
-    border-radius: 24px 24px 0 24px;
-    box-shadow: 0 6px 21px rgba(2,2,2,0.3);
-    transition: all .25s ease-in-out;
-}
-.tour-card-style-5 .container:hover .content-price-top {
-    right: 60px;
-    transition: all 0.8s cubic-bezier(0.68, -0.55, 0.27, 1.55);
-}
-.tour-card-style-5 .tour-details .tour-detail-ul {
-	display: flex;
-    list-style: none;
-	text-align: center;
-    margin: 0;
-    -webkit-box-pack: justify;
-    justify-content: space-between;
-}
-.tour-card-style-5 .tour-details .tour-detail-list {
-	flex: 1;
-}
-.tour-card-style-5 .tour-details .tour-detail-list p {
-	margin-bottom: 0px;
-}
-.tour-card-style-5 .tour-detail-icon {
-	font-size: 25px;
-}
-/* End Tour Card 5 CSS */
-
-/* Start Tour Card 6 CSS */
-.tour-card-style-6 {
-	box-shadow: 0px 0px 20px 1px #f0f1f3;
-    border: 1px solid #f0f1f3;
-	overflow: hidden;
-}
-.tour-card-style-6:hover {
-    box-shadow: 0 20px 30px rgba(0,0,0,0.2);
-    transition: all 0.8s cubic-bezier(0.68, -0.55, 0.27, 1.55);
-    transform: translate3d(0, -20px, 0);
-}
-.tour-card-style-6 {
-	box-shadow: 0px 0px 20px 1px #f0f1f3;
-    border: 1px solid #f0f1f3;	
-	transition: all 0.35s cubic-bezier(0.45, 0.05, 0.55, 0.95);
-}
-.tour-card-style-6 .container {
-	padding: 15px 15px 0px;
-}
-.tour-card-style-6 .tour-container {
-	display: flex;
-	flex-wrap: wrap;
-}
-.tour-card-style-6 .tour-content {
-	width: 60%;
-	align-self: center;
-	padding-right: 15px;
-}
-.tour-card-style-6 .tour-content-img {
-	width: 40%;
-}
-.tour-card-style-6 .elementor-tour-name-wrapper {
-	border-bottom: 1px solid #d8d8d8;
-	font-size: 20px;
-}
-.tour-card-style-6 .elementor-tour-price-wrapper {
-	font-size: 20px;
-	text-align: right;
-}
-.tour-card-style-6 .elementor-tour-description-wrapper {
-	color: #d8d8d8;
-	padding-top: 5px;
-	padding-bottom: 5px;
-}
-.tour-card-style-6 .tour-details .tour-detail-ul {
-	display: flex;
-    list-style: none;
-	text-align: center;
-    margin: 0;
-    -webkit-box-pack: justify;
-    justify-content: space-between;
-}
-.tour-card-style-6 .tour-details .tour-detail-list {
-	flex: 1;
-}
-.tour-card-style-6 .tour-details {
-	padding: 15px 0;
-}
-.tour-card-style-6 .tour-details .tour-detail-list p {
-	margin-bottom: 0px;
-}
-.tour-card-style-6 .tour-detail-icon {
-	font-size: 20px;
-}
-/* End Tour Card 6 CSS */
