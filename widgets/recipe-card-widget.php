@@ -19,7 +19,7 @@ class Recipe_Card_Elementor_Widget extends Widget_Base {
 
     //Function for get the icon of the element.
     public function get_icon() {
-        return 'eicon-recipe';
+        return 'fa fa-cutlery';
     }
 
     //Function for include element into the category.
@@ -60,19 +60,19 @@ class Recipe_Card_Elementor_Widget extends Widget_Base {
 
         $this->add_control(
                 'dish_name', [
-            'label' => __('Dish Name', CEE_DOMAIN),
+            'label' => __('Name', CEE_DOMAIN),
             'type' => Controls_Manager::TEXT,
-            'default' => __('Name', CEE_DOMAIN),
-            'placeholder' => __('Enter dish name', CEE_DOMAIN),
+            'default' => __('Ice Cream', CEE_DOMAIN),
+            'placeholder' => __('Write Dish Name', CEE_DOMAIN),
                 ]
         );
 		
 		$this->add_control(
                 'dish_type', [
-            'label' => __('Dish Type', CEE_DOMAIN),
+            'label' => __('Type', CEE_DOMAIN),
             'type' => Controls_Manager::TEXT,
-            'default' => __('Type', CEE_DOMAIN),
-            'placeholder' => __('Dessert,Salad,etc...', CEE_DOMAIN),
+            'default' => __('Dessert', CEE_DOMAIN),
+            'placeholder' => __('Write Type', CEE_DOMAIN),
                 ]
         );
 		
@@ -226,7 +226,7 @@ class Recipe_Card_Elementor_Widget extends Widget_Base {
         $this->end_controls_section();
 
         /*
-         * Start position control style
+         * Start type control style
          */
         $this->start_controls_section(
                 'section_recipe_type', [
@@ -283,6 +283,19 @@ class Recipe_Card_Elementor_Widget extends Widget_Base {
             'selector' => '{{WRAPPER}} .elementor-recipe-type-wrapper',
                 ]
         );
+		
+		$this->add_control(
+                'types_background_color', [
+            'label' => __('Background Color', CEE_DOMAIN),
+            'type' => Controls_Manager::COLOR,
+			'condition' => [
+                'recipe_card_style' => ['recipe-card-style-4'],
+            ],
+            'selectors' => [
+                '{{WRAPPER}} .bg-color-type' => 'background: {{VALUE}};',
+            ],
+                ]
+        );
 
         $this->end_controls_section();
 		
@@ -292,10 +305,38 @@ class Recipe_Card_Elementor_Widget extends Widget_Base {
 		 $this->start_controls_section(
                 'section_recipe_details', [
             'label' => __('Details', CEE_DOMAIN),
-			'condition' => [
-                'recipe_card_style' => ['recipe-card-style-1' , 'recipe-card-style-2', 'recipe-card-style-3', 'recipe-card-style-4'],
-            ],
             'tab' => Controls_Manager::TAB_STYLE,
+                ]
+        );
+		
+		$this->add_responsive_control(
+                'details_text_align', [
+            'label' => __('Alignment', CEE_DOMAIN),
+            'type' => Controls_Manager::CHOOSE,
+			'condition' => [
+                'recipe_card_style' => ['recipe-card-style-1' , 'recipe-card-style-2', 'recipe-card-style-3'],
+            ],
+            'options' => [
+                'left' => [
+                    'title' => __('Left', CEE_DOMAIN),
+                    'icon' => 'fa fa-align-left',
+                ],
+                'center' => [
+                    'title' => __('Center', CEE_DOMAIN),
+                    'icon' => 'fa fa-align-center',
+                ],
+                'right' => [
+                    'title' => __('Right', CEE_DOMAIN),
+                    'icon' => 'fa fa-align-right',
+                ],
+                'justify' => [
+                    'title' => __('Justified', CEE_DOMAIN),
+                    'icon' => 'fa fa-align-justify',
+                ],
+            ],
+            'selectors' => [
+                '{{WRAPPER}} .recipe-detail' => 'text-align: {{VALUE}};',
+            ],
                 ]
         );
 		
@@ -408,7 +449,7 @@ class Recipe_Card_Elementor_Widget extends Widget_Base {
 		
 		/*
          * Start control style tab for recipe card
-         * Start name control style
+         * Start button control style
          */
         $this->start_controls_section(
                 'section_recipe_button', [
@@ -459,11 +500,31 @@ class Recipe_Card_Elementor_Widget extends Widget_Base {
         );
 		
 		$this->add_control(
+                'button_text_hover_color', [
+            'label' => __('Text Hover Color', CEE_DOMAIN),
+            'type' => Controls_Manager::COLOR,
+            'selectors' => [
+                '{{WRAPPER}} .recipe-button a:hover' => 'color: {{VALUE}};',
+            ], 
+                ]
+        );
+		
+		$this->add_control(
                 'button_background_color', [
             'label' => __('Background Color', CEE_DOMAIN),
             'type' => Controls_Manager::COLOR,
             'selectors' => [
                 '{{WRAPPER}} .recipe-button a' => 'background-color: {{VALUE}};',
+            ],
+                ]
+        );
+		
+		$this->add_control(
+                'button_background_hover_color', [
+            'label' => __('Background Hover Color', CEE_DOMAIN),
+            'type' => Controls_Manager::COLOR,
+            'selectors' => [
+                '{{WRAPPER}} .recipe-button a:hover' => 'background-color: {{VALUE}};',
             ],
                 ]
         );
@@ -485,20 +546,74 @@ class Recipe_Card_Elementor_Widget extends Widget_Base {
                 ]
         );
 		
+		$this->add_responsive_control(
+                'box_padding', [
+            'label' => __('Padding', CEE_DOMAIN),
+            'type' => Controls_Manager::DIMENSIONS,
+            'size_units' => ['px', '%'],
+			'devices' => [ 'desktop', 'tablet', 'mobile' ],
+            'selectors' => [
+                '{{WRAPPER}} .recipe-card-style-1 .recipe-container,
+                 {{WRAPPER}} .recipe-card-style-2 .recipe-main-container,
+                 {{WRAPPER}} .recipe-card-style-3 .recipe-main-container,
+                 {{WRAPPER}} .recipe-card-style-4 .recipe-content,
+                 {{WRAPPER}} .recipe-card-style-5 .dish-description' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+            ],
+                ]
+        );
+		
 		$this->add_control(
                 'button_box_background_color', [
             'label' => __('Background Color', CEE_DOMAIN),
             'type' => Controls_Manager::COLOR,
             'selectors' => [
-                '{{WRAPPER}} .recipe-card-style-1 .container,
-				 {{WRAPPER}} .recipe-card-style-2 .container,
-				 {{WRAPPER}} .recipe-card-style-3 .container,
-				 {{WRAPPER}} .recipe-card-style-4 .container,
+                '{{WRAPPER}} .recipe-card-style-1 .recipe-main-container,
+				 {{WRAPPER}} .recipe-card-style-2 .recipe-main-container,
+				 {{WRAPPER}} .recipe-card-style-3 .recipe-main-container,
+				 {{WRAPPER}} .recipe-card-style-4 .recipe-content,
 				 {{WRAPPER}} .recipe-card-style-5 .dish-description' => 'background-color: {{VALUE}};',
             ],
                 ]
         );
 		
+		$this->add_group_control(
+                Group_Control_Border::get_type(), [
+            'name' => 'image_border',
+				'selector' => '{{WRAPPER}} .recipe-card-style-1,
+							   {{WRAPPER}} .recipe-card-style-2,
+							   {{WRAPPER}} .recipe-card-style-3,
+							   {{WRAPPER}} .recipe-card-style-4,
+							   {{WRAPPER}} .recipe-card-style-5',
+            'separator' => 'before',
+                ]
+        );
+
+        $this->add_responsive_control(
+                'border_radius', [
+            'label' => __('Border Radius', CEE_DOMAIN),
+            'type' => Controls_Manager::DIMENSIONS,
+            'size_units' => ['px', '%'],
+			'devices' => [ 'desktop', 'tablet', 'mobile' ],
+            'selectors' => [
+                '{{WRAPPER}} .recipe-card-style-1,
+                 {{WRAPPER}} .recipe-card-style-2,
+                 {{WRAPPER}} .recipe-card-style-3,
+                 {{WRAPPER}} .recipe-card-style-4,
+                 {{WRAPPER}} .recipe-card-style-5' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+            ],
+                ]
+        );
+		
+		$this->add_group_control(
+                Group_Control_Box_Shadow::get_type(), [
+            'name' => 'box_shadow',
+				'selector' => '{{WRAPPER}} .recipe-card-style-1,
+							   {{WRAPPER}} .recipe-card-style-2,
+							   {{WRAPPER}} .recipe-card-style-3,
+							   {{WRAPPER}} .recipe-card-style-4,
+							   {{WRAPPER}} .recipe-card-style-5,'
+                ]
+        );
 		$this->end_controls_section();
 
         /*
