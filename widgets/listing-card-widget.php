@@ -335,7 +335,7 @@ class Listing_Card_Elementor_Widget extends Widget_Base {
             'label' => __('Background Color', CEE_DOMAIN),
             'type' => Controls_Manager::COLOR,
 			'condition' => [
-                'listing_card_style' => ['listing-card-style-2' , 'listing-card-style-3' , 'listing-card-style-4'],
+                'listing_card_style' => ['listing-card-style-2' , 'listing-card-style-3'],
             ],
             'selectors' => [
                 '{{WRAPPER}} .wrapper-price , 
