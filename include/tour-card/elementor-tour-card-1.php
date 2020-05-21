@@ -1,8 +1,8 @@
 <!-- Start Tour Card 1 -->
 <div class="tour-card-style-1">
-    <div class="container">
-		<div>
-			<img src="<?php echo $settings['place_image']['url']; ?>" class="tour-img">
+    <div class="tour-main-container">
+		<div class="tour-img-content">
+			<img src="<?php echo $settings['place_image']['url']; ?>" class="tour-img" alt="<?php _e('Tour Image', CEE_DOMAIN) ?>" />
 		</div>
 		<div class="tour-container">
 			<div class="tour-content">
@@ -12,9 +12,9 @@
 			</div>
 			<div class="tour-details">
 				<ul class="tour-detail-ul">
-					<li class="tour-detail-list"><p class="tour-detail-icon"><i class="fas fa-sun"></i></p><p class="tour-detail-text"><?php echo $settings['tour_days']; ?> Days</p></li>
-					<li class="tour-detail-list"><p class="tour-detail-icon"><i class="fas fa-users"></i></p><p class="tour-detail-text"><?php echo $settings['tour_person']; ?> Persons</p></li>
-					<li class="tour-detail-list"><p class="tour-detail-icon"><i class="fas fa-flag"></i></p><p class="tour-detail-text"><?php echo $settings['tour_guides']; ?> Guides</p></li>
+					<li class="tour-detail-list"><p class="tour-detail-icon"><i class="fas fa-sun"></i></p><p class="tour-detail-text"><?php echo $settings['tour_days']; ?> <?php _e('Days', CEE_DOMAIN) ?></p></li>
+					<li class="tour-detail-list"><p class="tour-detail-icon"><i class="fas fa-users"></i></p><p class="tour-detail-text"><?php echo $settings['tour_person']; ?> <?php _e('Persons', CEE_DOMAIN) ?></p></li>
+					<li class="tour-detail-list"><p class="tour-detail-icon"><i class="fas fa-flag"></i></p><p class="tour-detail-text"><?php echo $settings['tour_guides']; ?> <?php _e('Guides', CEE_DOMAIN) ?></p></li>
 				</ul>
 			</div>
 			<div class="tour-button">
